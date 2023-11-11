@@ -1,0 +1,479 @@
+@import "scss/reset";
+@import "scss/vars";
+@import "scss/hover";
+@import "scss/header";
+@import "scss/subscribe";
+@import "scss/footer";
+@import "./scss/registration";
+@import "./scss/cart";
+@import "./scss/product";
+@import "./scss/catalog";
+
+.center {
+  width: 1140px;
+  margin: auto;
+}
+
+// Баннер
+.banners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f1e4e6;
+  margin-bottom: 65px;
+
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin-right: 48px;
+    padding-left: 16px;
+    border-left: 12px solid $color_main;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__subtitle_color {
+    color: $color_main;
+  }
+}
+
+// offers
+
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 96px;
+
+  &__top {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    text-transform: uppercase;
+  }
+
+  .white__text {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__link {
+    color: $color_main;
+    font-size: 24px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__link:hover {
+    color: #ee0827d0;
+  }
+}
+
+//  заголовок
+
+.title {
+  &__heading {
+    color: #222;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+
+  &__text {
+    color: #9f9f9f;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+}
+
+// product
+
+.product-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 50px;
+  margin-bottom: 128px;
+
+  gap: 30px;
+}
+
+.product {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__content {
+    background-color: #f8f8f8;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__name {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
+  }
+
+  &__text {
+    color: #5d5d5d;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  &__price {
+    color: $color_main;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+// кнопка продукта
+.content__btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 100px;
+
+  .content__btn-link {
+    color: $color_main;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 14px 39px 15px 39px;
+    background: #fff;
+    border: #f16d7f solid 1px;
+    transition: all 0.3s;
+  }
+
+  .content__btn-link:hover {
+    background-color: $color_main;
+    color: #fff;
+  }
+}
+
+// сервис
+.service {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 104px;
+  padding-bottom: 104px;
+
+  &__item {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    margin-bottom: 25px;
+  }
+
+  &__heading {
+    color: #fbfbfb;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    color: #fbfbfb;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    max-width: 360px;
+  }
+}
+/// конец страницы index.html ////
+
+/// registration.html///
+
+// .registration-block {
+//   background-color: #f8f3f4;
+//   padding: 60px 230px;
+// }
+
+// .registration-block__title {
+//   color: #f16d7f;
+//   font-family: Lato;
+//   font-size: 24px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: normal;
+// }
+
+
+// АДАПТИВ
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .center {
+    width: 100%;
+  }
+
+  // Банер
+  .banners {
+    padding-right: 33px;
+    padding-bottom: 65px;
+
+    &__photo {
+      min-width: 48%;
+    }
+
+    &__title {
+      font-size: 44px;
+      min-width: 283px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+  }
+
+  // Предложения
+  .offers {
+    height: 303px;
+    gap: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 110px;
+
+    &__img {
+      max-width: 100%;
+    }
+  }
+
+  // заголовок
+  .title {
+    .center {
+      width: 100%;
+    }
+
+    margin-bottom: 73px;
+  }
+  ///////////////////////
+
+  // product
+
+  .product-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+    padding-left: 2%;
+    margin-bottom: 33px;
+    padding-right: 2%;
+    
+    
+
+    .product {
+      width: 100%;
+    }
+
+    ///////////////////////
+  }
+
+
+
+
+
+
+  .product__box_none {
+
+    // выпадает 9 элемент так как убрать из сетки 9 элемент через display none  не получилось скрыл 9 hiden элемент и сдвинул в каталоге сетку вниз на -555
+    // margin-bottom: -500px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+    padding-left: 2%;
+    margin-bottom: 33px;
+    padding-right: 2%;
+    margin-bottom: -555px;
+  }
+
+  // service
+
+  .service {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  ///////////////////
+   .product_rm {
+    display: none;
+  }
+
+
+
+
+  .product {
+    width: 48%;
+}
+
+  
+
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .center {
+    width: 100%;
+  }
+  .banners {
+    margin-bottom: 64px;
+
+    padding: 42% 2%;
+
+    &__photo {
+      display: none;
+      justify-content: center;
+    }
+
+    &__title-box {
+      margin-right: 0;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &____subtitle {
+      font-size: 20px;
+    }
+  }
+
+  // пердложение
+
+  .offers {
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-bottom: 64px;
+
+    &__top {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    .offers__item {
+      width: 100%;
+    }
+
+    // .offers__item_big{
+    //   display: none;
+    // }
+
+    .offers__item_big {
+      // background-image: url(./img/offers/offer_mobile/offers_accesories.jpg);
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+      height: 111px;
+    }
+  }
+
+  // заголовок
+  .title {
+    margin-bottom: 64px;
+  }
+
+  /////////////////////
+
+  // product
+
+  .product-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  // service
+
+  .service {
+    flex-direction: column;
+    align-items: center;
+    gap: 46px;
+    padding-top: 48px;
+    padding-bottom: 81px;
+  }
+
+  ///////////
+  
+  
+
+  
+}
+
+
+
+
+
+
+

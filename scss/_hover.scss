@@ -1,0 +1,58 @@
+@import"vars";
+// header
+
+.header__logo:hover {
+  transform: scale(0.9);
+}
+
+.header__search:hover {
+  transform: scale(1.1);
+}
+
+.search:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.header__link-site:hover {
+  transform: scale(1.1);
+}
+
+.header__menu:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.registration__button:hover {
+  // кнопка регистрации
+  color: $color_main;
+  background-color: #fff;
+  box-shadow: 2px 2px 3px $color_main;
+}
+
+
+
+// .subscribe-block__btn:hover{
+//   // BLOCK SUBSCRIBE
+
+//   background-color: purple;
+//   color: aqua;
+// }
+
+
+
+.header__menu:active {
+    /* эффект прожатия кнопки*/
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+.header__search:active {
+    /* эффект прожатия кнопки*/
+    position: relative;
+    top: 1px;
+}
+

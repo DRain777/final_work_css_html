@@ -1,0 +1,278 @@
+.top-head {
+  background: #f8f3f4;
+  padding: 60px 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__heading {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $color_main;
+  }
+
+  .breadcrumbs {
+    display: flex;
+
+    &__link {
+      color: #636363;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      transition: 0.3s;
+    }
+
+    &__link:hover {
+      color: gray;
+    }
+
+    &__link_site {
+      font-weight: 700;
+      color: gray;
+    }
+
+    &__link_site:hover {
+      text-shadow: 1px 1px 1px gray;
+    }
+  }
+
+  .breadcrumbs__link:not(:last-child)::after {
+    content: "/";
+    padding: 0 8px;
+  }
+
+  .breadcrumbs__link:last-child {
+    font-weight: 700;
+    color: $color_main;
+  }
+}
+
+// carusel
+
+.slider {
+  position: relative;
+  padding-top: 50px;
+  margin-bottom: -70px;
+  // z-index: -1;
+
+  background-color: rgb(226, 242, 245);
+  height: 777px;
+  display: flex;
+  // margin-top: 50px;
+
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.slider_item {
+  width: 305px;
+  height: 402px;
+  object-fit: cover;
+  border-radius: 35px;
+  transition: 0.2s ease-in;
+  margin-top: 50px;
+  // margin-left: 10%;
+}
+
+.slider .center .slider_item {
+  /* .center   убрал с середине */
+  width: 380px;
+  height: 456px;
+  margin-top: 30px;
+}
+
+/* ///////// */
+
+.slider_btn {
+  top: 50%;
+  position: absolute;
+  /* top: 175%; */
+  transform: translateY(-50%);
+  z-index: 9;
+
+  display: block;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+
+  /* background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.
+    03%), #8b8b8b; */
+
+  background-color: $color_main;
+}
+
+.slider_btn--prev {
+  left: 95%;
+  padding-left: 26px;
+  justify-content: flex-start;
+}
+
+.slider_btn--next {
+  margin-right: 0;
+
+  padding-right: 26px;
+  justify-content: flex-end;
+}
+
+// карточка продукта
+
+.product__card {
+  position: relative;
+  margin-top: 160px;
+  z-index: 15;
+  width: 71%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  margin-bottom: 129px;
+
+  .section__name {
+    color: $color_main;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+
+  &-name {
+    color: #4d4d4d;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 12px;
+    margin-bottom: 48px;
+  }
+
+  &-text {
+    color: #5e5e5e;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    max-width: 554px;
+    margin-bottom: 32px;
+  }
+
+  &-price {
+    color: #ef5b70;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 65px;
+  }
+
+  &-menu {
+    margin-top: 65px;
+    display: flex;
+    gap: 23px;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #6f6e6e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 48px;
+    transition: 0.3s;
+  }
+
+  &-link:hover {
+    text-shadow: 1px 1px 1px gray;
+  }
+
+  &-link:hover svg path {
+    stroke: gray;
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    padding: 16px 56px 16px 24px;
+    border: 1px solid $color_main;
+    color: $color_main;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s;
+  }
+
+  &-button:hover {
+    background-color: $color_main;
+    color: #fff;
+  }
+
+  &-button:hover svg path {
+    fill: #fff;
+    transition: 0.3s;
+  }
+}
+
+
+
+.product-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 30px;
+    margin-bottom: 128px;
+}
+.product-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+  gap: 30px;
+  margin-bottom: 128px;
+}
+
+// адаптив
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-head {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .breadcrumbs {
+    padding-right: 4%;
+  }
+
+  .product_rm {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .top-head {
+    padding: 24px 24px 49px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .product-box {
+    padding-left: 2%;
+    padding-right: 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

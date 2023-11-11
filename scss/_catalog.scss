@@ -1,0 +1,197 @@
+// вложенные блоки
+
+.center {
+  width: 1140px;
+  margin: auto;
+}
+.sort {
+  padding-top: 12px;
+  display: flex;
+  gap: 28px;
+
+  &__details {
+    position: relative;
+    z-index: 9;
+  }
+
+  &__details[open] {
+    animation: slide 0.6s;
+  }
+
+  &__summary {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__check {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    color: #6f6e6e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__heading {
+    color: #6f6e6e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s;
+  }
+
+  &__heading:hover {
+    color: $color_main;
+    cursor: pointer;
+  }
+
+  &__summary:hover path {
+    color: $color_main;
+    fill: $color_main;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 7px 30px 11px 9px;
+    position: absolute;
+    z-index: 10;
+    left: -9px;
+    top: 20px;
+  }
+}
+
+.filter-sort {
+  display: flex;
+  height: 132px;
+  position: relative;
+  gap: 30px;
+  padding-top: 39px;
+}
+
+.filter {
+  padding-top: 13px;
+  width: 360px;
+  position: relative;
+
+  &__content {
+    background-color: #fff;
+    padding: 0px 16px 16px 16px;
+  }
+
+  &[open] {
+    background: #fff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    animation: slide 0.6s;
+    z-index: 10;
+  }
+
+  &[open] .filter__heading {
+    color: $color_main;
+  }
+
+  &[open] path {
+    fill: $color_main;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding-left: 16px;
+  }
+
+  &__heading {
+    color: gray;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: 0.3s;
+  }
+
+  &__heading:hover {
+    color: $color_main;
+    cursor: pointer;
+  }
+
+  &__summary:hover path {
+    fill: $color_main;
+  }
+
+  &__item {
+    margin-top: 16px;
+  }
+
+  &__head {
+    color: #6f6e6e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 8px 11px 11px 11px;
+    border-bottom: 1px solid #ebebeb;
+    border-left: 5px solid $color_main;
+  }
+
+  &__item[open] .filter__head {
+    color: $color_main;
+  }
+
+  &__link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 24px 16px;
+  }
+
+  &__link {
+    color: #6f6e6e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &:hover {
+      color: $color_main;
+    }
+  }
+}
+
+
+
+
+
+
+// адаптив
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .center {
+    width: 100%;
+  }
+
+  .product-box__product_none {
+    visibility: hidden;
+    display: none;
+  }
+
+  // .product__box_none {
+  //   margin-bottom: -500px;
+
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+
+  //   gap: 16px;
+  //   padding-left: 2%;
+  //   margin-bottom: 33px;
+  //   padding-right: 2%;
+  //   margin-bottom: -555px;
+  // }
+}
